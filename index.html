@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Birthday Surprise</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Gift Screen (ONLY thing visible at start) -->
+  <main class="screen screen--gift" id="giftScreen" aria-label="Gift screen">
+    <div class="birthday-gift" id="giftWrap" aria-label="Open the gift" role="button" tabindex="0">
+      <div class="gift">
+        <input id="click" type="checkbox" aria-label="Open gift" />
+        <label class="click" for="click" aria-hidden="true"></label>
+
+        <div class="wishes" id="wishesText">Happy Birthday!</div>
+
+        <div class="sparkles" aria-hidden="true">
+          <div class="spark1"></div>
+          <div class="spark2"></div>
+          <div class="spark3"></div>
+          <div class="spark4"></div>
+          <div class="spark5"></div>
+          <div class="spark6"></div>
+        </div>
+      </div>
+    </div>
+
+    <p class="hint">Click the gift 🎁</p>
+  </main>
+
+  <!-- Black transition overlay -->
+  <div class="blackout" id="blackout" aria-hidden="true"></div>
+
+  <!-- Autoplay helper (some browsers block autoplay with sound until user taps) -->
+  <button class="audio-gate" id="audioGate" type="button" hidden>
+    Tap to play music 🎵
+  </button>
+
+  <!-- Album Screen (hidden until gift click) -->
+  <main class="screen screen--album" id="albumScreen" aria-label="Album screen" hidden>
+    <header class="album-header" id="memories">
+      <h1 class="album-title">Memories With My Princess 💖</h1>
+      <p class="album-subtitle">❤ حبيت احط كم حاجه , ملناش صور مع بعض بس لينا ذكريات سوا مبتخلصش ❤</p>    </header>
+
+    <section class="album-grid" aria-label="Photo album">
+      <figure class="card">
+        <img src="eren.jpeg" alt="Memory photo 1" />
+        <figcaption class="caption">الصوره الطرش دي منساش ازاي صنعت يومي بجد وقتها وازاي لسه محتفظ بيها وبخاف تضيع او يحصلها حاجه كانت لازم تتحط وشكرا ليكي جدا ولتعبك وقتها عشان في الصوره دي 💖</figcaption>
+      </figure>
+
+      <figure class="card">
+        <img src="art.jpeg" alt="Memory photo 2" />
+        <figcaption class="caption">الرسمات الطرش دي الرسمات بقا اللي عرفت منها انك بتعرفي ترسمي لما ورتيني قبل كدا كنت مبهور فشخ اللي هو وه , الرسمه معلقه معايا من وقتها وبجد رسمك اكتر حاجه بتأكدلي انك هتكوني جرافيك ديزاين شطوره 💖</figcaption>
+      </figure>
+
+      <figure class="card">
+        <img src="first.jpeg" alt="Memory photo 3" />
+        <figcaption class="caption">اول شات بينا بقا وكدا لول كان رسميه فشخخ واحنا الاتنين عاملين مثقفين وفاهمين واحنا على الله بس كويس يعني كان شات جامد عرفتك منه والله كان اكتر شات عبثي وعشوائي بصراحه بس هو السبب في اللي احنا فيه دلوقتي 💝</figcaption>
+      </figure>
+
+      <figure class="card">
+        <img src="mayar.jpeg" alt="Memory photo 4" />
+        <figcaption class="caption">القمر حقي يجدعان ننهي بقا زي ما بيقولو ختامها مسك ف ختامها بيكي , انتِ البدرُ  حسناً والنساءُ كواكبُ
+وشتان مابينَ  الكواكب والبدرِ
+لقد فضلّتِ حسناً على الناسِ مثلما
+على ألف شهرٍ  فضلت ليلة القدرِ </figcaption>
+      </figure>
+    </section>
+
+    <section class="music" aria-label="Song section">
+      <h2>Song for birthday GIRLLL!! ❤️</h2>
+      <p class="music-note">
+       كل سنه وانتي معايا وجمبي, وطيبه برضو يلا مش خساره
+      </p>
+      <audio id="bgAudio" controls preload="metadata" autoplay loop>
+        <source src="song.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+    </section>
+
+    <footer class="footer">
+      <p>Made with ❤️</p>
+      <p>From Abdelrahman❤️</p>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
